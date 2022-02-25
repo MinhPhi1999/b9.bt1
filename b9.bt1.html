@@ -14,16 +14,18 @@
         let a = +document.getElementById('nhapWeight').value;
         let b = +document.getElementById('nhapHeight').value;
         let bmi = a / (b * b);
+        let   x = ''
 
         if (bmi < 18) {
-            document.getElementById('hien').innerHTML='underweight';
+            x ='underweight';
         } else if (bmi < 25) {
-            document.getElementById('hien').innerHTML='normal';
+            x ='normal';
         } else if (bmi < 30) {
-            document.getElementById('hien').innerHTML='overweight';
+            x ='overweight';
         } else {
-            document.getElementById('hien').innerHTML='obese';
+            x ='obese';
         }
+        document.getElementById('hien').innerHTML= x
 
     }
 </script>
