@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="hien"></p>
+<input id="nhapWeight" type="text">
+<input id="nhapHeight" type="text">
+<button onclick="ketQua()" >Enter</button>
+<script>
+    function ketQua() {
+        let a = +document.getElementById('nhapWeight').value;
+        let b = +document.getElementById('nhapHeight').value;
+        let bmi = a / (b * b);
+
+        if (bmi < 18) {
+            document.getElementById('hien').innerHTML='underweight';
+        } else if (bmi < 25) {
+            document.getElementById('hien').innerHTML='normal';
+        } else if (bmi < 30) {
+            document.getElementById('hien').innerHTML='overweight';
+        } else {
+            document.getElementById('hien').innerHTML='obese';
+        }
+
+    }
+</script>
+</body>
+</html>
